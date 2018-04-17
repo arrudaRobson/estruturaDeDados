@@ -3,26 +3,32 @@
 #include <locale.h>
 #include <math.h>
 
-int A, B, Result;
-float area;
 
 int main()
 {
   setlocale(LC_ALL,"portuguese");
-  int contador;
-  char nome[20];
+  int contador, compara;
+  char primeiroNome[20], segundoNome[20];
   printf("Digite um nome \n");
-  fflush(stdin);
-  gets(nome);
-  printf("O nome digitado foi %s\n",nome );
-  printf("A primeira letra é :%c\n",nome[0] );
-  for (contador = 0; contador < 30; contador++){
-      if (nome[contador] != '\0'){
+  gets(primeiroNome);
+  printf("Digite um nome \n");
+  gets(segundoNome);
+  printf("Os nomes digitados foram\n%s\n%s\n",primeiroNome, segundoNome);
 
-      }else{
-        break;
-      }
-    }
-    printf("%s tem %d caractéres.",nome ,contador);
+  compara = strncmp(primeiroNome, segundoNome, 20);
+
+  if(compara > 0)
+  {
+    printf("São diferentes\n");
+  }
+  else if(compara < 0)
+  {
+    printf("São diferentes\n");
+  }
+  else
+  {
+    printf("São iguais\n");
+  }
+
   return 0;
 }

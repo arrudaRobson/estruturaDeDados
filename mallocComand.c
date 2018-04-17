@@ -7,10 +7,15 @@
 int main()
 {
      setlocale(LC_ALL,"portuguese");
-     int *n;
-     n = (*int)malloc(sizeof(int));
+     int *n1, *n2, *r;
      printf("Digite um número: ");
-     scanf("%d",n);
-     printf("O número foi %d\n", *n);
+     n1 = (int *)malloc(sizeof(int));
+     scanf("%d",n1);
+     printf("Digite um número: ");
+     n2 = (int *)malloc(sizeof(int));
+     scanf("%d",n2);
+     r = (int *)malloc(sizeof(int));
+     *r = *n1 + *n2;
+     printf("Soma dos números = %d\n", *r);
      return 0;
 }

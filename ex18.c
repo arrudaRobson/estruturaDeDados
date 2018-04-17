@@ -5,22 +5,22 @@
 #include <string.h>
 
 
-int main(){
+void main(){
 	setlocale(LC_ALL,"portuguese");
-  
+
   int matriz[3][2], linha, coluna, max;
 
   printf("Digite os números da matriz\n" );
   for (linha = 0; linha <= 2; linha++){
-    for (coluna = 0; coluna <= 1; coluna++){ 
+    for (coluna = 0; coluna <= 1; coluna++){
         scanf("%d", &matriz[linha][coluna]);
     }
-  } 
+  }
   for (linha = 0; linha <= 2; linha++){
     for (coluna = 0; coluna <= 1; coluna++){
-        printf("%d\n", matriz[linha][coluna]);
-        printf("%d\n", max);   
+
     }
-  }  
-  return 0;
+  }
+  printf("%d\n", matriz[linha][coluna]);
+  printf("%d\n", max);
 }

@@ -1,7 +1,14 @@
 #include <stdio.h>
 
+void incrementa(int *a)
+{
+    *a = *a + 1;
+}
+
 int main()
 {
-	printf("C\nis the greatest\nLanguage\n");
-	return 0;
+    int a = 5;
+    incrementa(&a);
+
+    printf("%d\n",a);
 }
